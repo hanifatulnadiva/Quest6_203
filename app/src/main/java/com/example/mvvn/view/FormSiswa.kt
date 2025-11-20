@@ -49,6 +49,8 @@ fun FormSiswa(
             OutlinedTextField(
                 singleLine = true,
                 shape = MaterialTheme.shapes.medium,
+                modifier= Modifier .width(width = 250.dp).padding(top=20.dp),
+                label = {Text(stringResource(R.string.nama))},
                 value = textNama,
                 onValueChange = {
                     textNama=it
