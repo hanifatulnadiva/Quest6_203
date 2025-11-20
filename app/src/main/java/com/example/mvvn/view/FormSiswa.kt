@@ -1,13 +1,17 @@
 package com.example.mvvn.view
 
+import android.graphics.Paint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -65,6 +69,25 @@ fun FormSiswa(
                 thickness = dimensionResource(R.dimen.thickness_divider),
                 color =Color.Blue
             )
+            Row {
+                pilihanJK.forEach {
+                    item->
+                Row(
+                    modifier=Modifier .selectable(
+                    selected =textGender == item,
+                    onClick = { textGender= item }),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = textGender == item,
+                        onClick = {
+                            textGender = item
+                        }
+                    )
+                    Text(text=item) }
+
+                }
+            }
         }
 
     }
