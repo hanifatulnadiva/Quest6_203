@@ -2,6 +2,8 @@ package com.example.mvvn.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -54,6 +56,7 @@ fun TampilSiswa(
                     }
                     Divider(thickness = dimensionResource(R.dimen.thickness_divider))
                 }
+                Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_small)))
             }
         }
     }
