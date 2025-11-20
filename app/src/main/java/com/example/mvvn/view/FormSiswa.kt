@@ -96,5 +96,15 @@ fun FormSiswa(
             thickness=dimensionResource(R.dimen.thickness_divider),
             color=Color.Blue
         )
+        OutlinedTextField(
+            value =textAlamat,
+            singleLine = true,
+            shape =MaterialTheme.shapes.medium,
+            modifier=Modifier .width(250.dp),
+            label = {Text(text=stringResource(R.string.alamat))},
+            onValueChange = {
+                textAlamat = it
+            }
+        )
     }
 }
