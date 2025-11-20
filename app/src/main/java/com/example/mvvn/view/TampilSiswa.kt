@@ -1,7 +1,12 @@
 package com.example.mvvn.view
 
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.example.mvvn.model.Siswa
 import com.example.mvvn.R
@@ -18,4 +23,10 @@ fun TampilSiswa(
         Pair (first = stringResource(R.string.alamat), second = statusUISiswa.alamat),
 
     )
+    Scaffold (modifier = Modifier,
+        topBar = {TopAppBar(
+            title = { Text(text=stringResource(R.string.detail), color= Color.White) }
+        )}
+
+    ){  }
 }
