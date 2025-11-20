@@ -48,6 +48,11 @@ fun SiswaApp(
                     }
                 )
             }
+            composable(route=Navigasi.Detail.name){
+                TampilSiswa(statusUISiswa = uiState.value,
+                    onBackButtonClick = { cancelAndBackToFormulir(navController)})
+            }
+
         }
     }
 }
