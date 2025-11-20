@@ -1,5 +1,7 @@
 package com.example.mvvn.view
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -30,5 +32,11 @@ fun FormSiswa(
     Scaffold (modifier= Modifier,
         topBar = { TopAppBar(title = { Text(stringResource(R.string.app_name), color= Color.White)},
             colors= TopAppBarDefaults.mediumTopAppBarColors(colorResource(R.color.purple_500)))
-        }){}
+        }){
+        isiRuang->
+        Column (
+            modifier= Modifier.padding(paddingValues = isiRuang)
+        ){}
+
+    }
 }
